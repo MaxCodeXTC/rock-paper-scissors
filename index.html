@@ -3,8 +3,19 @@
 <head>
 	<title>Rock Paper Scissor</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
 </head>
+<header>
+	<h1 id="playerOne">Player One:
+		<div id="playerOneScore" class="score">0</div>
+	</h1>
+	<button id="start">Start Countdown!</button>
+	<h1 id="playerTwo">Player Two:
+		<div id="playerTwoScore" class="score">0</div>
+	</h1>
+</header>
 <body>
+	<div id="countdown"></div>
 	<div id="arena">
 		<div id="left" class="side">
 			<img id="left-hand" src="images/player1-hand.png">

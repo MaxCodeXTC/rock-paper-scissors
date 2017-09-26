@@ -1,5 +1,14 @@
+/** {
+	border: 1px solid black;
+}*/
 body {
 	text-align: center;
+	background-color: #7FDBFF; 
+}
+
+header {
+	background-image: url('../images/background-game.png');
+	background-size: cover; 
 }
 #arena {
 	width: 100%;
@@ -9,6 +18,10 @@ body {
 #left {
 	float: left;
 	width: 50%;
+	position: relative;
+	animation-name: example;
+  animation-duration: 3s;
+
 }
 
 #right {
@@ -18,4 +31,27 @@ body {
 
 .newHand {
 	width: 300px;
+}
+
+.rock {
+	width: 250px;
+}
+
+h1 {
+	display: inline-block;
+}
+
+#countdown {
+	font-size: 200px;
+	position: absolute;
+	top: 200px;
+	left: 45%;
+	font-family: 'Frijole', cursive;
+}
+
+@keyframes moveLeft {
+    0%   {left: 0px;}
+    25%  {left: -200px;}
+    50%  {left: -400px;}
+    100% {left: -600px;}
 }
