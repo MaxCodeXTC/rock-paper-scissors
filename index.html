@@ -4,16 +4,38 @@
 	<title>Rock Paper Scissor</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Freckle+Face|Monoton" rel="stylesheet">
 </head>
 <header>
+
+	<!-- Player 1 Controls -->
+	<ul id="controls1">
+		<li>Q = <img class="icon" src="images/rock.png" alt="rock"></li>
+		<li>W = <img class="icon" src="images/paper.png" alt="paper"></li>
+		<li>E = <img class="icon" src="images/scissors.png" alt="scissors"></li>
+	</ul>
+
+	<!-- PLayer 1 Score and Display -->
 	<h1 id="playerOne">Player One:
 		<div id="playerOneScore" class="score">0</div>
 	</h1>
+
+	<!-- Start Countdown Button -->
 	<button id="start">Start Countdown!</button>
+
+	<!-- PLayer 2 Score and Display -->
 	<h1 id="playerTwo">Player Two:
 		<div id="playerTwoScore" class="score">0</div>
 	</h1>
+
+	<!-- Player 2 Controls -->
+	<ul id="controls2">
+		<li>I = <img class="icon" src="images/rock.png" alt="rock"></li>
+		<li>O = <img class="icon" src="images/paper.png" alt="paper"></li>
+		<li>P = <img class="icon" src="images/scissors.png" alt="scissors"></li>
+	</ul>
 </header>
+
 <body>
 	<div id="countdown"></div>
 	<div id="arena">

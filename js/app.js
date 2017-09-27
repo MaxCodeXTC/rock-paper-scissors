@@ -1,7 +1,8 @@
 $(function(){
 
+var sec = 0;
 $('header').on('click', 'button', function() {
-	var sec = 3;
+	 sec = 3;
 	var timer = setInterval(function(){
 		$('#countdown').text(sec--);
 		if(sec == 0) {
@@ -11,19 +12,22 @@ $('header').on('click', 'button', function() {
 	}, 1000);
 	$('#left').toggleClass('alt');
 	$('#right').toggleClass('alt');
+	rockLeft();
 
 	//Changes left hand to rock
-	$('body').keyup(function(e) {
-		if (e.keyCode == 65) {
-			$('#left-hand')
-			.attr('src', 'images/rock-left.png')
-			.addClass('newHand rock');
-		}
-	});
-
+	function rockLeft() {
+		$('body').keyup(function(e) {
+			if (e.keyCode == 81 && sec > 0) {
+				$('#left-hand')
+				.attr('src', 'images/rock-left.png')
+				.addClass('newHand rock');
+			}
+	
+		});
+	}
 	//Changes left hand to paper
 	$('body').keyup(function(e) {
-		if (e.keyCode == 83) {
+		if (e.keyCode == 87 && sec > 0) {
 			$('#left-hand')
 			.attr('src', 'images/paper-left.png')
 			.addClass('newHand')
@@ -33,7 +37,7 @@ $('header').on('click', 'button', function() {
 
 	//Changes left hand to scissors
 	$('body').keyup(function(e) {
-		if (e.keyCode == 68) {
+		if (e.keyCode == 69 && sec > 0) {
 			$('#left-hand')
 			.attr('src', 'images/scissors-left.png')
 			.addClass('newHand')
@@ -43,7 +47,7 @@ $('header').on('click', 'button', function() {
 
 	//Changes right hand to rock
 	$('body').keyup(function(e) {
-		if (e.keyCode == 37) {
+		if (e.keyCode == 73 && sec > 0) {
 			$('#right-hand')
 			.attr('src', 'images/rock-right.png')
 			.addClass('newHand rock');
@@ -53,7 +57,7 @@ $('header').on('click', 'button', function() {
 
 	//Changes right hand to paper
 	$('body').keyup(function(e) {
-		if (e.keyCode == 40) {
+		if (e.keyCode == 79 && sec > 0) {
 			$('#right-hand')
 			.attr('src', 'images/paper-right.png')
 			.addClass('newHand')
@@ -63,7 +67,7 @@ $('header').on('click', 'button', function() {
 
 	//Changes right hand to scissors
 	$('body').keyup(function(e) {
-		if (e.keyCode == 39) {
+		if (e.keyCode == 80 && sec > 0) {
 			$('#right-hand')
 			.attr('src', 'images/scissors-right.png')
 			.addClass('newHand')
@@ -72,5 +76,8 @@ $('header').on('click', 'button', function() {
 	});
 
 });
+
+	//Switch statement to determine winning combinations
+
 
 });
