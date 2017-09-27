@@ -12,19 +12,16 @@ $('header').on('click', 'button', function() {
 	}, 1000);
 	$('#left').toggleClass('alt');
 	$('#right').toggleClass('alt');
-	rockLeft();
 
 	//Changes left hand to rock
-	function rockLeft() {
-		$('body').keyup(function(e) {
-			if (e.keyCode == 81 && sec > 0) {
-				$('#left-hand')
-				.attr('src', 'images/rock-left.png')
-				.addClass('newHand rock');
-			}
-	
-		});
-	}
+	$('body').keyup(function(e) {
+		if (e.keyCode == 81 && sec > 0) {
+			$('#left-hand')
+			.attr('src', 'images/rock-left.png')
+			.addClass('newHand rock');
+		}
+
+	});
 	//Changes left hand to paper
 	$('body').keyup(function(e) {
 		if (e.keyCode == 87 && sec > 0) {
