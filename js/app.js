@@ -26,8 +26,8 @@ $(function(){
 				clearInterval(timer);
 			}
 		}, 1000);
-		$('#left').toggleClass('alt');
-		$('#right').toggleClass('alt');
+		$('#left').addClass('alt').removeClass('spin');
+		$('#right').addClass('alt').removeClass('spin');
 
 		//Changes left hand to rock
 		$('body').keyup(function(e) {
@@ -95,13 +95,22 @@ $(function(){
 function hasWon() {	
 	if (leftHand.hasClass('rock') && rightHand.hasClass('scissors') ||
 		leftHand.hasClass('paper') && rightHand.hasClass('rock') ||
-		leftHand.hasClass('scissors') && rightHands.hasClass('paper')){
+		leftHand.hasClass('scissors') && rightHand.hasClass('paper')){
+		playerOneWin += 1;
+		left.addClass('spin').removeClass('alt');
+		right.removeClass('alt');
+	} else if (rightHand.hasClass('rock') && leftHand.hasClass('scissors') ||
+			  	rightHand.hasClass('paper') && leftHand.hasClass('rock') ||
+				rightHand.hasClass('scissors') && leftHand.hasClass('paper')) {
+		playerTwoWin += 1;
+		right.addClass('spin').removeClass('alt');
+		left.removeClass('alt');
+	} else {
+		left.addClass('spin').removeClass('alt');
+		right.addClass('spin').removeClass('alt');
 	}
-	left.toggleClass('spin');
-	playerOneScore += 1;
+	$('#playerOneScore').text(playerOneWin);
+	$('#playerTwoScore').text(playerTwoWin);
 }
-
-	//Check for left hand winner 
-
 
 });

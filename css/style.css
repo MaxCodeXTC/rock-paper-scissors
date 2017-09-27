@@ -97,7 +97,7 @@ h1 {
 
 #right.spin {
 	animation-name: spin;
-  animation-duration: 2000ms;
+  animation-duration: 1500ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
