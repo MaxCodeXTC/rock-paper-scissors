@@ -88,16 +88,32 @@ h1 {
 }
 
 /*Hand animations for winning*/
-#left.spin {
-	animation-name: spin;
+#left.spinLeft {
+	animation-name: spinLeft;
   animation-duration: 1500ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
-#right.spin {
-	animation-name: spin;
+#right.spinRight {
+	animation-name: spinRight;
   animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/*Hand animations for losing*/
+
+#left.leftLose {
+	animation-name: leftLose;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#right.rightLose {
+	animation-name: rightLose;
+  animation-duration: 1000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -137,7 +153,29 @@ h1 {
     100% {right: 0px;}
 }
 
-@keyframes spin {
+@keyframes leftLose {
+	  0%   {transform:rotate(30deg);}
+    25%  {transform:rotate(40deg);}
+    50%  {transform:rotate(50deg);}
+    75%  {transform:rotate(40deg);}
+    100% {transform:rotate(30deg);}
+}
+
+@keyframes rightLose {
+    0%   {transform:rotate(330deg);}
+    25%  {transform:rotate(320deg);}
+    50%  {transform:rotate(310deg);}
+    75%  {transform:rotate(320deg);}
+    100% {transform:rotate(330deg);}
+}
+
+
+@keyframes spinLeft {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
+}
+
+@keyframes spinRight {
+    from {transform:rotate(360deg);}
+    to {transform:rotate(0deg);}
 }

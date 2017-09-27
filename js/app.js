@@ -1,13 +1,15 @@
 $(function(){
-	// Global Variables
-	var leftHand = $('#left-hand');
-	var rightHand = $('#right-hand');
-	var left = $('#left');
-	var right = $('#right');
-	var sec = 0;
-	var playerOneWin = 0;
-	var playerTwoWin = 0;
+
+// Global Variables
+var leftHand = $('#left-hand');
+var rightHand = $('#right-hand');
+var left = $('#left');
+var right = $('#right');
+var sec = 0;
+var playerOneWin = 0;
+var playerTwoWin = 0;
 	
+	// Click button to start countdown
 	$('header').on('click', 'button', function(){
 		startCountdown();
 		setTimeout(function() {
@@ -15,7 +17,7 @@ $(function(){
 		}, 5000);
 	});	
 
-
+	// Once function is called, players can choose R/P/S but choices are disabled after 3 seconds
 	function startCountdown() {
 		sec = 3;
 		var timer = setInterval(function(){
@@ -26,8 +28,14 @@ $(function(){
 				clearInterval(timer);
 			}
 		}, 1000);
-		$('#left').addClass('alt').removeClass('spin');
-		$('#right').addClass('alt').removeClass('spin');
+		left.addClass('alt')
+			.removeClass('spinLeft leftLose');
+		right.addClass('alt')
+			.removeClass('spinRight rightLose');
+		leftHand.attr('src', 'images/player1-hand.png')
+				.removeClass('newHand rock paper scissors');
+		rightHand.attr('src', 'images/player2-hand.png')
+				.removeClass('newHand rock paper scissors');
 
 		//Changes left hand to rock
 		$('body').keyup(function(e) {
@@ -92,23 +100,26 @@ $(function(){
 		});
 
 	}
+
+//Determines all win states and adds according animations
 function hasWon() {	
 	if (leftHand.hasClass('rock') && rightHand.hasClass('scissors') ||
 		leftHand.hasClass('paper') && rightHand.hasClass('rock') ||
 		leftHand.hasClass('scissors') && rightHand.hasClass('paper')){
 		playerOneWin += 1;
-		left.addClass('spin').removeClass('alt');
-		right.removeClass('alt');
+		left.addClass('spinLeft').removeClass('alt leftLose');
+		right.addClass('rightLose').removeClass('alt');
 	} else if (rightHand.hasClass('rock') && leftHand.hasClass('scissors') ||
 			  	rightHand.hasClass('paper') && leftHand.hasClass('rock') ||
 				rightHand.hasClass('scissors') && leftHand.hasClass('paper')) {
 		playerTwoWin += 1;
-		right.addClass('spin').removeClass('alt');
-		left.removeClass('alt');
+		right.addClass('spinRight').removeClass('alt rightLose');
+		left.addClass('leftLose').removeClass('alt');
 	} else {
-		left.addClass('spin').removeClass('alt');
-		right.addClass('spin').removeClass('alt');
+		left.addClass('spinLeft').removeClass('alt leftLose');
+		right.addClass('spinRight').removeClass('alt rightLose');
 	}
+	// Adds score depending on win state
 	$('#playerOneScore').text(playerOneWin);
 	$('#playerTwoScore').text(playerTwoWin);
 }
