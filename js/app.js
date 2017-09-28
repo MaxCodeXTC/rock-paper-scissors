@@ -10,98 +10,92 @@ var playerOneWin = 0;
 var playerTwoWin = 0;
 var round = 1;
 	
-	// Click button to start countdown
-	$('header').on('click', 'button', function(){
-		startCountdown();
-		setTimeout(function() {
-			hasWon();
-		}, 6100);
-		$('#first2three').text('Round:' + round);
-		changeScreen();
-	});	
+// Click button to start countdown and call all functions inside
+$('header').on('click', 'button', function(){
+	startCountdown();
+	setTimeout(function() {
+		hasWon();
+	}, 6100);
+	$('#first2three').text('Round:' + round);
+	changeScreen();
+});	
 
-	// Once function is called, players can choose R/P/S but choices are disabled after 3 seconds
-	function startCountdown() {
-		sec = 4;
-		var timer = setInterval(function(){
-			$('#countdown').fadeIn('fast');
-			$('#countdown').text(sec--);
-			if(sec == 0) {
-				$('#countdown').fadeOut('slow');
-				clearInterval(timer);
-			}
-		}, 1000);
-		left.addClass('alt')
-			.removeClass('spinLeft leftLose');
-		right.addClass('alt')
-			.removeClass('spinRight rightLose');
-		leftHand.attr('src', 'images/player1-hand.png')
-				.removeClass('newHand rock paper scissors');
-		rightHand.attr('src', 'images/player2-hand.png')
-				.removeClass('newHand rock paper scissors');
-		$('#oneWinner, #twoWinner, #tie').removeClass('alt');
-
-		//Changes left hand to rock
-		$('body').keyup(function(e) {
-			if (e.keyCode == 81 && sec > 0) {
-				$('#left-hand')
-				.attr('src', 'images/rock-left.png')
-				.addClass('newHand rock')
-				.removeClass('paper scissors');
-			}
-
-		});
-
-		//Changes left hand to paper
-		$('body').keyup(function(e) {
-			if (e.keyCode == 87 && sec > 0) {
-				$('#left-hand')
-				.attr('src', 'images/paper-left.png')
-				.addClass('newHand paper')
-				.removeClass('rock scissors');
-			}
-		});
-
-		//Changes left hand to scissors
-		$('body').keyup(function(e) {
-			if (e.keyCode == 69 && sec > 0) {
-				$('#left-hand')
-				.attr('src', 'images/scissors-left.png')
-				.addClass('newHand scissors')
-				.removeClass('rock paper');
-			}
-		});
-
-		//Changes right hand to rock
-		$('body').keyup(function(e) {
-			if (e.keyCode == 73 && sec > 0) {
-				$('#right-hand')
-				.attr('src', 'images/rock-right.png')
-				.addClass('newHand rock')
-				.removeClass('paper scissors');
-
-			}
-		});
-
-		//Changes right hand to paper
-		$('body').keyup(function(e) {
-			if (e.keyCode == 79 && sec > 0) {
-				$('#right-hand')
-				.attr('src', 'images/paper-right.png')
-				.addClass('newHand paper')
-				.removeClass('rock scissors');
-			}
-		});
-
-		//Changes right hand to scissors
-		$('body').keyup(function(e) {
-			if (e.keyCode == 80 && sec > 0) {
-				$('#right-hand')
-				.attr('src', 'images/scissors-right.png')
-				.addClass('newHand scissors')
-				.removeClass('rock paper');
-			}
-		});
+/* Once function is called, players can choose R/P/S but choices are disabled after 3 seconds
+ * Classes are all reset as well
+*/
+function startCountdown() {
+	sec = 4;
+	var timer = setInterval(function(){
+		$('#countdown').fadeIn('fast');
+		$('#countdown').text(sec--);
+		if(sec == 0) {
+			$('#countdown').fadeOut('slow');
+			clearInterval(timer);
+		}
+	}, 1000);
+	left.addClass('alt')
+		.removeClass('spinLeft leftLose');
+	right.addClass('alt')
+		.removeClass('spinRight rightLose');
+	leftHand.attr('src', 'images/player1-hand.png')
+			.removeClass('newHand rock paper scissors');
+	rightHand.attr('src', 'images/player2-hand.png')
+			.removeClass('newHand rock paper scissors');
+	$('#oneWinner, #twoWinner, #tie').removeClass('alt');
+	//Changes left hand to rock
+	$('body').keyup(function(e) {
+		if (e.keyCode == 81 && sec > 0) {
+			$('#left-hand')
+			.attr('src', 'images/rock-left.png')
+			.addClass('newHand rock')
+			.removeClass('paper scissors');
+		}
+	});
+	//Changes left hand to paper
+	$('body').keyup(function(e) {
+		if (e.keyCode == 87 && sec > 0) {
+			$('#left-hand')
+			.attr('src', 'images/paper-left.png')
+			.addClass('newHand paper')
+			.removeClass('rock scissors');
+		}
+	});
+	//Changes left hand to scissors
+	$('body').keyup(function(e) {
+		if (e.keyCode == 69 && sec > 0) {
+			$('#left-hand')
+			.attr('src', 'images/scissors-left.png')
+			.addClass('newHand scissors')
+			.removeClass('rock paper');
+		}
+	});
+	//Changes right hand to rock
+	$('body').keyup(function(e) {
+		if (e.keyCode == 73 && sec > 0) {
+			$('#right-hand')
+			.attr('src', 'images/rock-right.png')
+			.addClass('newHand rock')
+			.removeClass('paper scissors');
+		}
+	});
+	//Changes right hand to paper
+	$('body').keyup(function(e) {
+		if (e.keyCode == 79 && sec > 0) {
+			$('#right-hand')
+			.attr('src', 'images/paper-right.png')
+			.addClass('newHand paper')
+			.removeClass('rock scissors');
+		}
+	});
+	//Changes right hand to scissors
+	$('body').keyup(function(e) {
+		if (e.keyCode == 80 && sec > 0) {
+			$('#right-hand')
+			.attr('src', 'images/scissors-right.png')
+			.addClass('newHand scissors')
+			.removeClass('rock paper');
+		}
+	});
 	}
 
 //Determines all win states and adds according animations

@@ -1,6 +1,3 @@
-/** {
-	border: 1px solid black;
-}*/
 body {
 	text-align: center;
 	background-image: url("../images/wild-west.jpg");
@@ -59,7 +56,7 @@ h1 {
 	color: #FF4136;
 }
 
-/*Container holds First to Five/Round number and start countdown button*/
+/*Container holds First to Three/Round number and start countdown button*/
 #middle-column {
 	display: inline-block;
 }
@@ -69,6 +66,7 @@ h2 {
 	font-size: 50px;
 	margin: 0 0 10px 0;
 	text-transform: uppercase;
+	color: white;
 }
 
 #start {
@@ -153,7 +151,7 @@ h2 {
   animation-timing-function: linear;
 }
 
-/*Animation for Player Wins and Tie*/
+/*Hidden Div State and Animations for Player Wins and Tie*/
 #oneWinner {
 	position: absolute;
 	left: -600px;
@@ -223,7 +221,6 @@ h2 {
 	animation-duration: 3500ms;
 }
 
-
 /*Sets size of chosen hand (rock, paper, scissors)*/
 .newHand {
 	width: 375px;
@@ -238,14 +235,16 @@ h2 {
 #countdown {
 	font-size: 200px;
 	position: absolute;
-	top: 200px;
+	top: 250px;
 	left: 45%;
 	font-family: 'Frijole', cursive;
 	color: black;
 }
 
 
-/*Animations section*/
+/****** Animations section*******/
+
+/*Collision Animation for fists*/
 @keyframes leftMove {
 		0% {left: -600px;}
 		10%{left: -600px; top:;}
@@ -310,6 +309,7 @@ h2 {
 		100%{right: 0px; top: 0px;}
 }
 
+/*Losing Fist Animations*/
 @keyframes leftLose {
 	  0%   {transform:rotate(30deg);}
     25%  {transform:rotate(40deg);}
@@ -326,7 +326,7 @@ h2 {
     100% {transform:rotate(330deg);}
 }
 
-
+/*Winning Fist Animations*/
 @keyframes spinLeft {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
@@ -337,6 +337,7 @@ h2 {
     to {transform:rotate(0deg);}
 }
 
+/*Winning and Tie Div Animations*/
 @keyframes winOne {
 	0% {left: -600px}
 	10% {left: -600px}
