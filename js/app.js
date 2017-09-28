@@ -146,9 +146,9 @@ function changeScreen() {
 	if (round === 2) {
 		$('body').css('background-image', 'url(images/space.jpg)');
 	} else if (round == 3) {
-		$('body').css('background-image', 'url(images/bar.png)');
-	} else if (round === 4) {
 		$('body').css('background-image', 'url(images/Battleback_coliseum.png)');
+	} else if (round === 4) {
+		$('body').css('background-image', 'url(images/Arena_Battle_Background.jpg)');
 	} else if (round === 5) {
 		$('body').css('background-image', 'url(images/final.jpg)');
 	}
