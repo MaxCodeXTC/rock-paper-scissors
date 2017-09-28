@@ -15,17 +15,17 @@ var round = 1;
 		startCountdown();
 		setTimeout(function() {
 			hasWon();
-		}, 5000);
-		$('#first2five').text('Round:' + round);
+		}, 6100);
+		$('#first2three').text('Round:' + round);
 		changeScreen();
 	});	
 
 	// Once function is called, players can choose R/P/S but choices are disabled after 3 seconds
 	function startCountdown() {
-		sec = 3;
+		sec = 4;
 		var timer = setInterval(function(){
-			$('#countdown').text(sec--);
 			$('#countdown').fadeIn('fast');
+			$('#countdown').text(sec--);
 			if(sec == 0) {
 				$('#countdown').fadeOut('slow');
 				clearInterval(timer);
@@ -132,11 +132,11 @@ function hasWon() {
 	$('#playerTwoScore').text(playerTwoWin);
 
 	//If player gets 5 wins the page reloads
-	if (playerOneWin === 5) {
-		alert('Player One Wins! Click okay to restart.');
+	if (playerOneWin === 3) {
+		alert('Player One Wins! Click ok to restart.');
 		location.reload();
-	} else if (playerTwoWin === 5) {
-		alert('Player Two Wins! Click okay to restart');
+	} else if (playerTwoWin === 3) {
+		alert('Player Two Wins! Click ok to restart');
 		location.reload();
 	}
 }
@@ -144,20 +144,12 @@ function hasWon() {
 //Changes background image depending on round
 function changeScreen() {
 	if (round === 2) {
-		$('body').css('background-image', 'url(images/Battleback_coliseum.png)');
-	} else if (round == 3) {
 		$('body').css('background-image', 'url(images/space.jpg)');
-	} else if (round === 4) {
-		$('body').css('background-image', 'url(images/underwater.jpg)');
-	} else if (round === 5) {
-		$('body').css('background-image', 'url(images/forest.jpeg)');
-	} else if (round === 6) {
-		$('body').css('background-image', 'url(images/wild-west.jpg)');
-	} else if (round === 7) {
+	} else if (round == 3) {
 		$('body').css('background-image', 'url(images/bar.png)');
-	} else if (round === 8) {
-		$('body').css('background-image', 'url(images/sunflower.jpg)');
-	} else if (round === 9) {
+	} else if (round === 4) {
+		$('body').css('background-image', 'url(images/Battleback_coliseum.png)');
+	} else if (round === 5) {
 		$('body').css('background-image', 'url(images/final.jpg)');
 	}
 }

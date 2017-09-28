@@ -3,7 +3,7 @@
 }*/
 body {
 	text-align: center;
-	background-image: url("../images/Arena_Battle_Background.jpg");
+	background-image: url("../images/wild-west.jpg");
 	background-size: cover;
 }
 
@@ -113,14 +113,14 @@ h2 {
 	width: 50%;
 	position: relative;
 	animation-name: leftMove;
-  animation-duration: 5s;
+  animation-duration: 6s;
 }
 
 #right.alt {
 	float: right;
 	width: 50%;
 	animation-name: rightMove;
-  animation-duration: 5s;
+  animation-duration: 6s;
 }
 
 /*Hand animations for winning*/
@@ -174,12 +174,12 @@ h2 {
 	background-color: transparent;
 	z-index: 1;
 	animation-name: winOne;
-	animation-duration: 4000ms;
+	animation-duration: 5000ms;
 }
 
 #twoWinner {
 	position: absolute;
-	right: -600px;
+	top: -120px;
 	height: 400px;
 	width: 500px;
 	z-index: 1;
@@ -197,7 +197,7 @@ h2 {
 	background-color: transparent;
 	z-index: 1;
 	animation-name: winTwo;
-	animation-duration: 4000ms;
+	animation-duration: 5000ms;
 }
 
 #tie {
@@ -216,11 +216,11 @@ h2 {
 	width: 500px;
 	font-size: 100px;
 	font-family: 'Germania One', cursive;
-	color: #FF4136;
+	color: black;
 	background-color: transparent;
 	z-index: 1;
 	animation-name: tie;
-	animation-duration: 4000ms;
+	animation-duration: 3500ms;
 }
 
 
@@ -426,7 +426,16 @@ h2 {
 	57% {top: 370px}
 	58% {top: 380px}
 	59% {top: 390px}
-	60% {top: 1500px}
+	60% {top: 400px}
+	61% {top: 410px}
+	62% {top: 420px}
+	63% {top: 430px}
+	64% {top: 440px}
+	65% {top: 450px}
+	66% {top: 460px}
+	67% {top: 470px}
+	68% {top: 480px}
+	69% {top: 490px}
 	70% {top: 1500px}
 	80% {top: 1500px}
 	90% {top: 1500px}
