@@ -8,7 +8,7 @@ body {
 
 /*Top Hub Section*/
 header {
-	background-color: #40451C;
+	
 	height: 13em;
 }
 
@@ -56,11 +56,11 @@ h1 {
 /* Arena/Hand area*/
 #arena {
 	width: 100%;
-	margin: 15% auto;
+	margin: 10% auto;
 }
 
 .hand {
-	width: 500px;
+	width: 450px;
 }
 
 #left {
@@ -124,12 +124,12 @@ h1 {
 
 /*Sets size of chosen hand (rock, paper, scissors)*/
 .newHand {
-	width: 400px;
+	width: 375px;
 }
 
 /*Rock was weird so had to set a custom size to match paper and scissors*/
 .rock {
-	width: 350px;
+	width: 325px;
 }
 
 /*Style for the countdown timer that appears after button press*/
