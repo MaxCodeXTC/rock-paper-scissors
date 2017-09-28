@@ -39,6 +39,7 @@ var round = 1;
 				.removeClass('newHand rock paper scissors');
 		rightHand.attr('src', 'images/player2-hand.png')
 				.removeClass('newHand rock paper scissors');
+		$('#oneWinner, #twoWinner, #tie').removeClass('alt');
 
 		//Changes left hand to rock
 		$('body').keyup(function(e) {
@@ -112,6 +113,7 @@ function hasWon() {
 		round += 1;
 		left.addClass('spinLeft').removeClass('alt leftLose');
 		right.addClass('rightLose').removeClass('alt');
+		$('#oneWinner').addClass('alt');
 	} else if (rightHand.hasClass('rock') && leftHand.hasClass('scissors') ||
 			  	rightHand.hasClass('paper') && leftHand.hasClass('rock') ||
 				rightHand.hasClass('scissors') && leftHand.hasClass('paper')) {
@@ -119,9 +121,11 @@ function hasWon() {
 		round += 1;
 		right.addClass('spinRight').removeClass('alt rightLose');
 		left.addClass('leftLose').removeClass('alt');
+		$('#twoWinner').addClass('alt');
 	} else {
 		left.addClass('spinLeft').removeClass('alt leftLose');
 		right.addClass('spinRight').removeClass('alt rightLose');
+		$('#tie').addClass('alt');
 	}
 	// Adds score depending on win state
 	$('#playerOneScore').text(playerOneWin);
