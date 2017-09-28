@@ -10,20 +10,13 @@ var playerOneWin = 0;
 var playerTwoWin = 0;
 var round = 1;
 	
-	// function enterName() {
-	// 	var playerOne = prompt("Player One enter your name", "Name");
-	// 	$('#playerOne').html(playerOne + " :");
-	// }
-
-	// enterName();
-	
 	// Click button to start countdown
 	$('header').on('click', 'button', function(){
 		startCountdown();
 		setTimeout(function() {
 			hasWon();
 		}, 5000);
-		$('#winner').text('Round:' + round);
+		$('#first2five').text('Round:' + round);
 		changeScreen();
 	});	
 
@@ -108,7 +101,6 @@ var round = 1;
 				.removeClass('rock paper');
 			}
 		});
-
 	}
 
 //Determines all win states and adds according animations
