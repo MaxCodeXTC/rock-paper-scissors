@@ -1,0 +1,11 @@
+body {
+	background-image: url("../images/RPS.jpg");
+	background-size: cover;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 110px;
+	color: white;
+}
