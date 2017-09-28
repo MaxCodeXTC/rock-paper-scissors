@@ -5,7 +5,6 @@ body {
 	text-align: center;
 	background-image: url("../images/Arena_Battle_Background.jpg");
 	background-size: cover;
-	color: white;
 }
 
 /*Top Hub Section*/
@@ -26,20 +25,20 @@ ul {
 
 li {
 	font-size: 50px;
-	font-family: 'Monoton', cursive;
 	font-weight: bold;
+	font-family: 'Germania One', cursive;
 }
 
 #controls1 {
 	float: left;
-	color: blue;
+	color: rgb(26, 148, 255);
 }
 
 #controls2 {
 	float: right;
 	position: relative;
 	right: 2%;
-	color: red;
+	color: #FF4136;
 }
 
 /*Player Score and button section*/
@@ -51,13 +50,13 @@ h1 {
 }
 
 #playerOne {
-	border: 7px dashed blue;
-	color: blue;
+	border: 7px dashed rgb(26, 148, 255);
+	color: rgb(26, 148, 255);
 }
 
 #playerTwo {
-	border: 7px dashed red;
-	color: red;
+	border: 7px dashed #FF4136;
+	color: #FF4136;
 }
 
 #middle-column {
@@ -68,6 +67,7 @@ h2 {
 	font-family: 'Germania One', cursive;
 	font-size: 50px;
 	margin: 0 0 10px 0;
+	text-transform: uppercase;
 }
 
 #start {
