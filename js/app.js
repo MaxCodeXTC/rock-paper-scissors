@@ -8,6 +8,14 @@ var right = $('#right');
 var sec = 0;
 var playerOneWin = 0;
 var playerTwoWin = 0;
+var round = 1;
+	
+	// function enterName() {
+	// 	var playerOne = prompt("Player One enter your name", "Name");
+	// 	$('#playerOne').html(playerOne + " :");
+	// }
+
+	// enterName();
 	
 	// Click button to start countdown
 	$('header').on('click', 'button', function(){
@@ -15,6 +23,10 @@ var playerTwoWin = 0;
 		setTimeout(function() {
 			hasWon();
 		}, 5000);
+		//Changes background image depending on round
+		if (round === 2) {
+			$('body').css('background-image', 'url(images/Battleback_coliseum.png)');
+		}
 	});	
 
 	// Once function is called, players can choose R/P/S but choices are disabled after 3 seconds
@@ -107,12 +119,14 @@ function hasWon() {
 		leftHand.hasClass('paper') && rightHand.hasClass('rock') ||
 		leftHand.hasClass('scissors') && rightHand.hasClass('paper')){
 		playerOneWin += 1;
+		round += 1;
 		left.addClass('spinLeft').removeClass('alt leftLose');
 		right.addClass('rightLose').removeClass('alt');
 	} else if (rightHand.hasClass('rock') && leftHand.hasClass('scissors') ||
 			  	rightHand.hasClass('paper') && leftHand.hasClass('rock') ||
 				rightHand.hasClass('scissors') && leftHand.hasClass('paper')) {
 		playerTwoWin += 1;
+		round += 1;
 		right.addClass('spinRight').removeClass('alt rightLose');
 		left.addClass('leftLose').removeClass('alt');
 	} else {
@@ -122,6 +136,15 @@ function hasWon() {
 	// Adds score depending on win state
 	$('#playerOneScore').text(playerOneWin);
 	$('#playerTwoScore').text(playerTwoWin);
+
+	//If player gets 5 wins the page reloads
+	if (playerOneWin === 5) {
+		alert('Player One Wins! Click okay to restart.');
+		location.reload();
+	} else if (playerTwoWin === 5) {
+		alert('Player Two Wins! Click okay to restart');
+		location.reload();
+	}
 }
 
 });
