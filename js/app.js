@@ -23,6 +23,7 @@ var round = 1;
 		setTimeout(function() {
 			hasWon();
 		}, 5000);
+		$('#winner').text('Round:' + round);
 		changeScreen();
 	});	
 
