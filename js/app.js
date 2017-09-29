@@ -37,9 +37,9 @@ function startCountdown() {
 		.removeClass('spinLeft leftLose');
 	right.addClass('alt')
 		.removeClass('spinRight rightLose');
-	leftHand.attr('src', 'images/player1-hand.png')
+	leftHand.attr('src', '')
 			.removeClass('newHand rock paper scissors');
-	rightHand.attr('src', 'images/player2-hand.png')
+	rightHand.attr('src', '')
 			.removeClass('newHand rock paper scissors');
 	$('#oneWinner, #twoWinner, #tie').removeClass('alt');
 	//Changes left hand to rock

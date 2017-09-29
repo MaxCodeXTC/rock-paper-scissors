@@ -1,3 +1,8 @@
+html {
+	height: 100%;
+}
+
+
 body {
 	text-align: center;
 	background-image: url("../images/wild-west.jpg");
@@ -9,51 +14,26 @@ header {
 	height: 13em;
 }
 
-.icon {
-	height: 70px;
-	width: 70px;
-}
-
-/*Control Lists in header*/
-ul {
-	display: inline-block;
-	list-style: none;
-}
-
-li {
-	font-size: 50px;
-	font-weight: bold;
-	font-family: 'Germania One', cursive;
-}
-
-#controls1 {
-	float: left;
-	color: rgb(26, 148, 255);
-}
-
-#controls2 {
-	float: right;
-	position: relative;
-	right: 2%;
-	color: #FF4136;
-}
-
 /*Player Score and button section*/
 h1 {
 	display: inline-block;
-	font-family: 'Germania One', cursive;
-	font-size: 65px;
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 50px;
   padding: 24px;
 }
 
 #playerOne {
-	border: 7px dashed rgb(26, 148, 255);
+	border: 7px solid rgb(26, 148, 255);
 	color: rgb(26, 148, 255);
+	border-radius: 100px;
+	margin-right: 50px;
 }
 
 #playerTwo {
-	border: 7px dashed #FF4136;
+	border: 7px solid #FF4136;
 	color: #FF4136;
+	border-radius: 100px;
+	margin-left: 50px;
 }
 
 /*Container holds First to Three/Round number and start countdown button*/
@@ -62,8 +42,8 @@ h1 {
 }
 
 h2 {
-	font-family: 'Germania One', cursive;
-	font-size: 50px;
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 35px;
 	margin: 0 0 10px 0;
 	text-transform: uppercase;
 	color: white;
@@ -76,6 +56,7 @@ h2 {
 	background-color: black;
 	margin: 0 10px 10px 10px;
 	padding: 15px;
+	font-family: 'Cabin Sketch', cursive;
 }
 
 #start:hover {
@@ -105,6 +86,45 @@ h2 {
 	position: relative;
 }
 
+/*Control Lists in header*/
+ul {
+	display: inline-block;
+	list-style: none;
+}
+
+li {
+	font-size: 50px;
+	font-weight: bold;
+	font-family: 'Cabin Sketch', cursive;
+	display: inline-block;
+	padding: 0 10px;
+	color: white;
+}
+
+#controls1 {
+	float: left;
+	bottom: 0;
+}
+
+#controls2 {
+	float: right;
+	position: relative;
+	right: 2%;
+	bottom: 0;
+}
+
+/*Small Images for controls*/
+.icon {
+	height: 70px;
+	width: 70px;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
 /*Hand Animations for moving into screen*/
 #left.alt{
 	float: left;
@@ -167,7 +187,7 @@ h2 {
 	height: 400px;
 	width: 500px;
 	font-size: 100px;
-	font-family: 'Germania One', cursive;
+	font-family: 'Cabin Sketch', cursive;
 	color: rgb(26, 148, 255);
 	background-color: transparent;
 	z-index: 1;
@@ -190,7 +210,7 @@ h2 {
 	height: 400px;
 	width: 500px;
 	font-size: 100px;
-	font-family: 'Germania One', cursive;
+	font-family: 'Cabin Sketch', cursive;
 	color: #FF4136;
 	background-color: transparent;
 	z-index: 1;
@@ -213,7 +233,7 @@ h2 {
 	height: 400px;
 	width: 500px;
 	font-size: 100px;
-	font-family: 'Germania One', cursive;
+	font-family: 'Cabin Sketch', cursive;
 	color: black;
 	background-color: transparent;
 	z-index: 1;
