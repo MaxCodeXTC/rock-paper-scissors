@@ -98,12 +98,12 @@ li {
 	font-family: 'Cabin Sketch', cursive;
 	display: inline-block;
 	padding: 0 10px;
-	color: white;
 }
 
 #controls1 {
 	float: left;
 	bottom: 0;
+	color: rgb(26, 148, 255);
 }
 
 #controls2 {
@@ -111,6 +111,7 @@ li {
 	position: relative;
 	right: 2%;
 	bottom: 0;
+	color: #FF4136;
 }
 
 /*Small Images for controls*/
@@ -126,7 +127,7 @@ footer {
 	right: 0;
 }
 /*Hand Animations for moving into screen*/
-#left.alt{
+#left.alt {
 	float: left;
 	width: 50%;
 	position: relative;
@@ -457,8 +458,8 @@ footer {
 	67% {top: 470px}
 	68% {top: 480px}
 	69% {top: 490px}
-	70% {top: 1500px}
-	80% {top: 1500px}
-	90% {top: 1500px}
-	100%{top: 1500px}
+	70% {top: 900px}
+	80% {top: 1000px}
+	90% {top: 1100px}
+	100%{top: 1200px}
 }

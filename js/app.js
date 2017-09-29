@@ -9,7 +9,7 @@ var sec = 0;
 var playerOneWin = 0;
 var playerTwoWin = 0;
 var round = 1;
-	
+
 // Click button to start countdown and call all functions inside
 $('header').on('click', 'button', function(){
 	startCountdown();
