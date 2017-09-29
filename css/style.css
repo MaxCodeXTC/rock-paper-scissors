@@ -24,14 +24,12 @@ h1 {
 #playerOne {
 	border: 7px solid rgb(26, 148, 255);
 	color: rgb(26, 148, 255);
-	border-radius: 100px;
 	margin-right: 50px;
 }
 
 #playerTwo {
 	border: 7px solid #FF4136;
 	color: #FF4136;
-	border-radius: 100px;
 	margin-left: 50px;
 }
 
