@@ -51,7 +51,7 @@ function startCountdown() {
 			.removeClass('paper scissors');
 		}
 	});
-	//Changes left hand to paper
+	// Changes left hand to paper
 	$('body').keyup(function(e) {
 		if (e.keyCode == 87 && sec > 0) {
 			$('#left-hand')
@@ -60,7 +60,7 @@ function startCountdown() {
 			.removeClass('rock scissors');
 		}
 	});
-	//Changes left hand to scissors
+	// Changes left hand to scissors
 	$('body').keyup(function(e) {
 		if (e.keyCode == 69 && sec > 0) {
 			$('#left-hand')
@@ -69,7 +69,7 @@ function startCountdown() {
 			.removeClass('rock paper');
 		}
 	});
-	//Changes right hand to rock
+	// Changes right hand to rock
 	$('body').keyup(function(e) {
 		if (e.keyCode == 73 && sec > 0) {
 			$('#right-hand')
@@ -78,7 +78,7 @@ function startCountdown() {
 			.removeClass('paper scissors');
 		}
 	});
-	//Changes right hand to paper
+	// Changes right hand to paper
 	$('body').keyup(function(e) {
 		if (e.keyCode == 79 && sec > 0) {
 			$('#right-hand')
@@ -87,7 +87,7 @@ function startCountdown() {
 			.removeClass('rock scissors');
 		}
 	});
-	//Changes right hand to scissors
+	// Changes right hand to scissors
 	$('body').keyup(function(e) {
 		if (e.keyCode == 80 && sec > 0) {
 			$('#right-hand')
@@ -98,7 +98,7 @@ function startCountdown() {
 	});
 	}
 
-//Determines all win states and adds according animations
+// Determines all win states and adds according animations
 function hasWon() {	
 	if (leftHand.hasClass('rock') && rightHand.hasClass('scissors') ||
 		leftHand.hasClass('paper') && rightHand.hasClass('rock') ||
@@ -125,11 +125,12 @@ function hasWon() {
 	$('#playerOneScore').text(playerOneWin);
 	$('#playerTwoScore').text(playerTwoWin);
 
+	// Adds a delay on checking the final win so that the animations can play out before resetting
 	setTimeout(function(){
 		winAll();
 	}, 2000);
 
-	//If player gets 5 wins the page reloads
+	// If player gets 5 wins the page reloads
 	function winAll(){
 		if (playerOneWin === 3) {
 			alert('Player One Wins! Click ok to restart.');
@@ -141,7 +142,7 @@ function hasWon() {
 	}
 }
 
-//Changes background image depending on round
+// Changes background image depending on round
 function changeScreen() {
 	if (round === 2) {
 		$('body').css('background-image', 'url(images/space.jpg)');

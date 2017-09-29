@@ -2,19 +2,18 @@ html {
 	height: 100%;
 }
 
-
 body {
 	text-align: center;
 	background-image: url("../images/wild-west.jpg");
 	background-size: cover;
 }
 
-/*Top Hub Section*/
+/*T op Hub Section */
 header {
 	height: 13em;
 }
 
-/*Player Score and button section*/
+/* Player Score and button section */
 h1 {
 	display: inline-block;
 	font-family: 'Cabin Sketch', cursive;
@@ -36,7 +35,7 @@ h1 {
 	margin-left: 50px;
 }
 
-/*Container holds First to Three/Round number and start countdown button*/
+/* Container holds First to Three/Round number and start countdown button */
 #middle-column {
 	display: inline-block;
 }
@@ -49,6 +48,7 @@ h2 {
 	color: white;
 }
 
+/* Start countdown button */
 #start {
 	font-size: 30px;
 	border-radius: 10px;
@@ -64,7 +64,7 @@ h2 {
 	background-color: white;
 }
 
-/* Arena/Hand area*/
+/* Arena/Hand area */
 #arena {
 	width: 100%;
 	margin: 10% auto;
@@ -86,7 +86,7 @@ h2 {
 	position: relative;
 }
 
-/*Control Lists in header*/
+/* Control Lists in header */
 ul {
 	display: inline-block;
 	list-style: none;
@@ -114,7 +114,7 @@ li {
 	color: #FF4136;
 }
 
-/*Small Images for controls*/
+/* Small Images for controls */
 .icon {
 	height: 70px;
 	width: 70px;
@@ -126,7 +126,7 @@ footer {
 	left: 0;
 	right: 0;
 }
-/*Hand Animations for moving into screen*/
+/* Hand Animations for moving into screen */
 #left.alt {
 	float: left;
 	width: 50%;
@@ -142,7 +142,7 @@ footer {
   animation-duration: 6s;
 }
 
-/*Hand animations for winning*/
+/* Hand animations for winning */
 #left.spinLeft {
 	animation-name: spinLeft;
   animation-duration: 1500ms;
@@ -157,7 +157,7 @@ footer {
   animation-timing-function: linear;
 }
 
-/*Hand animations for losing*/
+/* Hand animations for losing */
 #left.leftLose {
 	animation-name: leftLose;
   animation-duration: 1000ms;
@@ -172,7 +172,7 @@ footer {
   animation-timing-function: linear;
 }
 
-/*Hidden Div State and Animations for Player Wins and Tie*/
+/* Hidden Div State and Animations for Player Wins and Tie */
 #oneWinner {
 	position: absolute;
 	left: -600px;
@@ -242,17 +242,17 @@ footer {
 	animation-duration: 3500ms;
 }
 
-/*Sets size of chosen hand (rock, paper, scissors)*/
+/* Sets size of chosen hand (rock, paper, scissors) */
 .newHand {
 	width: 375px;
 }
 
-/*Rock was weird so had to set a custom size to match paper and scissors*/
+/* Rock was weird so had to set a custom size to match paper and scissors */
 .rock {
 	width: 325px;
 }
 
-/*Style for the countdown timer that appears after button press*/
+/* Style for the countdown timer that appears after button press */
 #countdown {
 	font-size: 200px;
 	position: absolute;
@@ -263,9 +263,9 @@ footer {
 }
 
 
-/****** Animations section*******/
+/****** Animations Section *******/
 
-/*Collision Animation for fists*/
+/* Collision Animation for fists */
 @keyframes leftMove {
 		0% {left: -600px;}
 		10%{left: -600px; top:;}
@@ -330,7 +330,7 @@ footer {
 		100%{right: 0px; top: 0px;}
 }
 
-/*Losing Fist Animations*/
+/* Losing Fist Animations */
 @keyframes leftLose {
 	  0%   {transform:rotate(30deg);}
     25%  {transform:rotate(40deg);}
@@ -347,7 +347,7 @@ footer {
     100% {transform:rotate(330deg);}
 }
 
-/*Winning Fist Animations*/
+/* Winning Fist Animations */
 @keyframes spinLeft {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
@@ -358,7 +358,7 @@ footer {
     to {transform:rotate(0deg);}
 }
 
-/*Winning and Tie Div Animations*/
+/* Winning and Tie Div Animations */
 @keyframes winOne {
 	0% {left: -600px}
 	10% {left: -600px}
