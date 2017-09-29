@@ -10,7 +10,7 @@ https://trello.com/b/XypuHNgI/rock-paper-scissors
 
 ### Actual Landing page:
 Click [here](miketheo423.github.io/rock-paper-scissors/landing.html) to see the landing page!
-The button on the bottom right of this page will start the game, or you can click [here] (miketheo423.github.io/rock-paper-scissors/game.html) to get straight to the action.
+The button on the bottom right of this page will start the game, or you can click [here](miketheo423.github.io/rock-paper-scissors/game.html) to get straight to the action.
 
 ### Approach:
 I wanted to implement a way that players can choose their classes without being able to see what the other player chose.
