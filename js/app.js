@@ -125,13 +125,19 @@ function hasWon() {
 	$('#playerOneScore').text(playerOneWin);
 	$('#playerTwoScore').text(playerTwoWin);
 
+	setTimeout(function(){
+		winAll();
+	}, 2000);
+
 	//If player gets 5 wins the page reloads
-	if (playerOneWin === 3) {
-		alert('Player One Wins! Click ok to restart.');
-		location.reload();
-	} else if (playerTwoWin === 3) {
-		alert('Player Two Wins! Click ok to restart');
-		location.reload();
+	function winAll(){
+		if (playerOneWin === 3) {
+			alert('Player One Wins! Click ok to restart.');
+			location.reload();
+		} else if (playerTwoWin === 3) {
+			alert('Player Two Wins! Click ok to restart');
+			location.reload();
+		}
 	}
 }
 
