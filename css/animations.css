@@ -1,0 +1,341 @@
+/* Hand Animations for moving into screen */
+
+/* Makes the left hand fly in at end of countdown, then bounces after collision*/
+#left.alt {
+	float: left;
+	width: 50%;
+	position: relative;
+	animation-name: leftMove;
+  animation-duration: 6s;
+}
+
+/* Makes the right hand fly in at end of countdown, then bounces after collision*/
+#right.alt {
+	float: right;
+	width: 50%;
+	animation-name: rightMove;
+  animation-duration: 6s;
+}
+
+/* Hand animations for winning */
+
+/* Makes the left hand start spinning */
+#left.spinLeft {
+	animation-name: spinLeft;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Makes the right hand start spinning */
+#right.spinRight {
+	animation-name: spinRight;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Hand animations for losing */
+
+/* Makes the left hand "sad" motion */
+#left.leftLose {
+	animation-name: leftLose;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Makes the right hand "sad" motion */
+#right.rightLose {
+	animation-name: rightLose;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Hidden Div State and Animations for Player Wins and Tie */
+#oneWinner {
+	position: absolute;
+	left: -600px;
+	height: 400px;
+	width: 500px;
+	z-index: 1;
+}
+
+/* Displays the text that player one wins, makes div fly into screen from the left, slow down in the middle, and fly out to the right */
+#oneWinner.alt {
+	position: absolute;
+	left: -600px;
+	top: 250px;
+	height: 400px;
+	width: 500px;
+	font-size: 100px;
+	font-family: 'Cabin Sketch', cursive;
+	color: rgb(26, 148, 255);
+	background-color: transparent;
+	z-index: 1;
+	animation-name: winOne;
+	animation-duration: 5000ms;
+}
+
+#twoWinner {
+	position: absolute;
+	top: -120px;
+	height: 400px;
+	width: 500px;
+	z-index: 1;
+}
+
+/* Displays the text that player two wins, makes div fly into screen from the right, slow down in the middle, and fly out to the left */
+#twoWinner.alt {
+	position: absolute;
+	right: -600px;
+	top: 250px;
+	height: 400px;
+	width: 500px;
+	font-size: 100px;
+	font-family: 'Cabin Sketch', cursive;
+	color: #FF4136;
+	background-color: transparent;
+	z-index: 1;
+	animation-name: winTwo;
+	animation-duration: 5000ms;
+}
+
+#tie {
+	position: absolute;
+	left: -600px;
+	height: 400px;
+	width: 500px;
+	z-index: 1;
+}
+
+/* Displays the text that there was a tie, makes div fly into screen from the top, slow down in the middle, and fly out to the bottom */
+#tie.alt {
+	position: absolute;
+	left: 475px;
+	top: -1200px;
+	height: 400px;
+	width: 500px;
+	font-size: 100px;
+	font-family: 'Cabin Sketch', cursive;
+	color: white;
+	background-color: transparent;
+	z-index: 1;
+	animation-name: tie;
+	animation-duration: 3500ms;
+}
+
+/****** Animations Section *******/
+
+/* Collision Animation for fists */
+
+/* Makes the right hand fly in at end of countdown, then bounces after collision*/
+@keyframes leftMove {
+		0% {left: -600px;}
+		10%{left: -600px; top:;}
+		20%{left: -600px; top:;}
+		30%{left: -600px; top:;}
+		40%{left: -600px; top:;}
+		50%{left: -600px; top:;}
+		60%{left: -600px; top:;}
+		70%{left: -600px;  top:;}
+		80%{left: 200px; top: 0px;}
+		81%{left: 190px; top:;}
+		82%{left: 180px;top:;}
+		83%{left: 170px;top:;}
+		84%{left: 160px;top:;}
+		85%{left: 150px; top: -100px;}
+		86%{left: 140px;top:;}
+		87%{left: 130px;top:;}
+		88%{left: 120px;top:;}
+		89%{left: 110px;top:;}
+		90%{left: 100px; top: 0px;}
+		91%{left: 90px;top:;}
+		92%{left: 80px;top:;}
+		93%{left: 70px;top:;}
+		94%{left: 60px;top:;}
+		95%{left: 50px; top: -50px;}
+		96%{left: 40px;top:;}
+		97%{left: 30px;top:;}
+		98%{left: 20px;top:;}
+		99%{left: 10px;top:;}
+		100%{left: 0px; top: 0px;}
+}
+
+/* Makes the right hand fly in at end of countdown, then bounces after collision*/
+@keyframes rightMove {
+   0% {right: -600px;}
+		10%{right: -600px; top:;}
+		20%{right: -600px; top:;}
+		30%{right: -600px; top:;}
+		40%{right: -600px; top:;}
+		50%{right: -600px; top:;}
+		60%{right: -600px; top:;}
+		70%{right: -600px;  top:;}
+		80%{right: 200px; top: 0px;}
+		81%{right: 190px; top:;}
+		82%{right: 180px;top:;}
+		83%{right: 170px;top:;}
+		84%{right: 160px;top:;}
+		85%{right: 150px; top: -100px;}
+		86%{right: 140px;top:;}
+		87%{right: 130px;top:;}
+		88%{right: 120px;top:;}
+		89%{right: 110px;top:;}
+		90%{right: 100px; top: 0px;}
+		91%{right: 90px;top:;}
+		92%{right: 80px;top:;}
+		93%{right: 70px;top:;}
+		94%{right: 60px;top:;}
+		95%{right: 50px; top: -50px;}
+		96%{right: 40px;top:;}
+		97%{right: 30px;top:;}
+		98%{right: 20px;top:;}
+		99%{right: 10px;top:;}
+		100%{right: 0px; top: 0px;}
+}
+
+/* Losing Fist Animations */
+
+/* Makes the left hand "sad" motion */
+@keyframes leftLose {
+	  0%   {transform:rotate(30deg);}
+    25%  {transform:rotate(40deg);}
+    50%  {transform:rotate(50deg);}
+    75%  {transform:rotate(40deg);}
+    100% {transform:rotate(30deg);}
+}
+
+/* Makes the right hand "sad" motion */
+@keyframes rightLose {
+    0%   {transform:rotate(330deg);}
+    25%  {transform:rotate(320deg);}
+    50%  {transform:rotate(310deg);}
+    75%  {transform:rotate(320deg);}
+    100% {transform:rotate(330deg);}
+}
+
+/* Winning Fist Animations */
+
+/* Makes the left hand start spinning */
+@keyframes spinLeft {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+/* Makes the right hand start spinning */
+@keyframes spinRight {
+    from {transform:rotate(360deg);}
+    to {transform:rotate(0deg);}
+}
+
+/* Winning and Tie Div Animations */
+
+/* Displays the text that player one wins, makes div fly into screen from the left, slow down in the middle, and fly out to the right */
+@keyframes winOne {
+	0% {left: -600px}
+	10% {left: -600px}
+	20% {left: -600px}
+	30% {left: 400px}
+	31% {left: 410px}
+	32% {left: 420px}
+	33% {left: 430px}
+	34% {left: 440px}
+	35% {left: 450px}
+	36% {left: 460px}
+	37% {left: 470px}
+	38% {left: 480px}
+	39% {left: 490px}
+	40% {left: 500px}
+	50% {left: 500px}
+	51% {left: 510px}
+	52% {left: 520px}
+	53% {left: 530px}
+	54% {left: 540px}
+	55% {left: 550px}
+	56% {left: 560px}
+	57% {left: 570px}
+	58% {left: 580px}
+	59% {left: 590px}
+	60% {left: 1500px}
+	70% {left: 1500px}
+	80% {left: 1500px}
+	90% {left: 1500px}
+	100%{left: 1500px}
+}
+
+/* Displays the text that player two wins, makes div fly into screen from the right, slow down in the middle, and fly out to the left */
+@keyframes winTwo {
+	0% {right: -600px}
+	10% {right: -600px}
+	20% {right: -600px}
+	30% {right: 400px}
+	31% {right: 410px}
+	32% {right: 420px}
+	33% {right: 430px}
+	34% {right: 440px}
+	35% {right: 450px}
+	36% {right: 460px}
+	37% {right: 470px}
+	38% {right: 480px}
+	39% {right: 490px}
+	40% {right: 500px}
+	50% {right: 500px}
+	51% {right: 510px}
+	52% {right: 520px}
+	53% {right: 530px}
+	54% {right: 540px}
+	55% {right: 550px}
+	56% {right: 560px}
+	57% {right: 570px}
+	58% {right: 580px}
+	59% {right: 590px}
+	60% {right: 1500px}
+	70% {right: 1500px}
+	80% {right: 1500px}
+	90% {right: 1500px}
+	100%{right: 1500px}
+}
+
+/* Displays the text that there was a tie, makes div fly into screen from the top, slow down in the middle, and fly out to the bottom */
+@keyframes tie {
+	0% {top: -600px}
+	10% {top: -600px}
+	20% {top: -600px}
+	30% {top: 200px}
+	31% {top: 210px}
+	32% {top: 220px}
+	33% {top: 230px}
+	34% {top: 240px}
+	35% {top: 250px}
+	36% {top: 260px}
+	37% {top: 270px}
+	38% {top: 280px}
+	39% {top: 290px}
+	40% {top: 300px}
+	50% {top: 300px}
+	51% {top: 310px}
+	52% {top: 320px}
+	53% {top: 330px}
+	54% {top: 340px}
+	55% {top: 350px}
+	56% {top: 360px}
+	57% {top: 370px}
+	58% {top: 380px}
+	59% {top: 390px}
+	60% {top: 400px}
+	61% {top: 410px}
+	62% {top: 420px}
+	63% {top: 430px}
+	64% {top: 440px}
+	65% {top: 450px}
+	66% {top: 460px}
+	67% {top: 470px}
+	68% {top: 480px}
+	69% {top: 490px}
+	70% {top: 900px}
+	80% {top: 1000px}
+	90% {top: 1100px}
+	100%{top: 1200px}
+}
