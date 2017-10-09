@@ -144,6 +144,3 @@ footer {
 	left: 0;
 	right: 0;
 }
-
-/* Imports separate style sheet for animations */
-@import url('/css/animations.css')
