@@ -1,5 +1,7 @@
 $(function(){
 
+	console.log($('header'));
+
 // Global Variables
 var leftHand = $('#left-hand');
 var rightHand = $('#right-hand');
@@ -12,9 +14,11 @@ var round = 1;
 
 // Click button to start countdown and call all functions inside
 $('header').on('click', 'button', function(){
+	$(this).attr('disabled', 'disabled')
 	startCountdown();
 	setTimeout(function() {
 		hasWon();
+		$('#start').attr('disabled', false)
 	}, 6100);
 	$('#first2three').text('Round:' + round);
 	changeScreen();
@@ -28,20 +32,18 @@ function startCountdown() {
 	var timer = setInterval(function(){
 		$('#countdown').fadeIn('fast');
 		$('#countdown').text(sec--);
-		if(sec == 0) {
+		if(sec <= 0) {
 			$('#countdown').fadeOut('slow');
 			clearInterval(timer);
 		}
 	}, 1000);
+
 	// Removes animation classes for hands and resets hand image
-	left.addClass('alt')
-			.removeClass('spinLeft leftLose');
-	right.addClass('alt')
-			 .removeClass('spinRight rightLose');
-	leftHand.attr('src', '')
-					.removeClass('newHand rock paper scissors');
-	rightHand.attr('src', '')
-					 .removeClass('newHand rock paper scissors');
+	left.addClass('alt').removeClass('spinLeft leftLose');
+	right.addClass('alt').removeClass('spinRight rightLose');
+	leftHand.attr('src', '').removeClass('newHand rock paper scissors');
+	rightHand.attr('src', '').removeClass('newHand rock paper scissors');
+
 	// Removes animation classes for text after win state is checked
 	$('#oneWinner, #twoWinner, #tie').removeClass('alt');
 	//Changes left hand to rock

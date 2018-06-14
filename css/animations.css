@@ -4,7 +4,7 @@
 #left.alt {
 	float: left;
 	width: 50%;
-	position: relative;
+	/* position: relative; */
 	animation-name: leftMove;
   animation-duration: 6s;
 }
@@ -104,7 +104,7 @@
 
 #tie {
 	position: absolute;
-	left: -600px;
+	left: -1000%;
 	height: 400px;
 	width: 500px;
 	z-index: 1;
@@ -113,7 +113,7 @@
 /* Displays the text that there was a tie, makes div fly into screen from the top, slow down in the middle, and fly out to the bottom */
 #tie.alt {
 	position: absolute;
-	left: 475px;
+	left: 35%;
 	top: -1200px;
 	height: 400px;
 	width: 500px;
@@ -132,68 +132,57 @@
 
 /* Makes the right hand fly in at end of countdown, then bounces after collision*/
 @keyframes leftMove {
-		0% {left: -600px;}
-		10%{left: -600px; top:;}
-		20%{left: -600px; top:;}
-		30%{left: -600px; top:;}
-		40%{left: -600px; top:;}
-		50%{left: -600px; top:;}
-		60%{left: -600px; top:;}
-		70%{left: -600px;  top:;}
-		80%{left: 200px; top: 0px;}
-		81%{left: 190px; top:;}
-		82%{left: 180px;top:;}
-		83%{left: 170px;top:;}
-		84%{left: 160px;top:;}
-		85%{left: 150px; top: -100px;}
-		86%{left: 140px;top:;}
-		87%{left: 130px;top:;}
-		88%{left: 120px;top:;}
-		89%{left: 110px;top:;}
-		90%{left: 100px; top: 0px;}
-		91%{left: 90px;top:;}
-		92%{left: 80px;top:;}
-		93%{left: 70px;top:;}
-		94%{left: 60px;top:;}
-		95%{left: 50px; top: -50px;}
-		96%{left: 40px;top:;}
-		97%{left: 30px;top:;}
-		98%{left: 20px;top:;}
-		99%{left: 10px;top:;}
-		100%{left: 0px; top: 0px;}
+	0% { left: -100% }
+	70% { left: -100% }
+	80%{left: 20%; top: 0px;}
+	81%{left: 19%; }
+	82%{left: 18%; }
+	83%{left: 17%; }
+	84%{left: 16%; }
+	85%{left: 15%; top: -100px;}
+	86%{left: 14%; }
+	87%{left: 13%; }
+	88%{left: 12%; }
+	89%{left: 11%; }
+	90%{left: 10%; top: 0px;}
+	91%{left: 9%; }
+	92%{left: 8%; }
+	93%{left: 7%; }
+	94%{left: 6%; }
+	95%{left: 5%; top: -50px;}
+	96%{left: 4%; }
+	97%{left: 3%; }
+	98%{left: 2%; }
+	99%{left: 1%; }
+	100%{left: 0; top: 0px;}
 }
 
 /* Makes the right hand fly in at end of countdown, then bounces after collision*/
+
 @keyframes rightMove {
-   0% {right: -600px;}
-		10%{right: -600px; top:;}
-		20%{right: -600px; top:;}
-		30%{right: -600px; top:;}
-		40%{right: -600px; top:;}
-		50%{right: -600px; top:;}
-		60%{right: -600px; top:;}
-		70%{right: -600px;  top:;}
-		80%{right: 200px; top: 0px;}
-		81%{right: 190px; top:;}
-		82%{right: 180px;top:;}
-		83%{right: 170px;top:;}
-		84%{right: 160px;top:;}
-		85%{right: 150px; top: -100px;}
-		86%{right: 140px;top:;}
-		87%{right: 130px;top:;}
-		88%{right: 120px;top:;}
-		89%{right: 110px;top:;}
-		90%{right: 100px; top: 0px;}
-		91%{right: 90px;top:;}
-		92%{right: 80px;top:;}
-		93%{right: 70px;top:;}
-		94%{right: 60px;top:;}
-		95%{right: 50px; top: -50px;}
-		96%{right: 40px;top:;}
-		97%{right: 30px;top:;}
-		98%{right: 20px;top:;}
-		99%{right: 10px;top:;}
-		100%{right: 0px; top: 0px;}
+	0% { right: -100% }
+	70% { right: -100% }
+	80%{right: 20%; top: 0px;}
+	81%{right: 19%; }
+	82%{right: 18%; }
+	83%{right: 17%; }
+	84%{right: 16%; }
+	85%{right: 15%; top: -100px;}
+	86%{right: 14%; }
+	87%{right: 13%; }
+	88%{right: 12%; }
+	89%{right: 11%; }
+	90%{right: 10%; top: 0px;}
+	91%{right: 9%; }
+	92%{right: 8%; }
+	93%{right: 7%; }
+	94%{right: 6%; }
+	95%{right: 5%; top: -50px;}
+	96%{right: 4%; }
+	97%{right: 3%; }
+	98%{right: 2%; }
+	99%{right: 1%; }
+	100%{right: 0; top: 0px;}
 }
 
 /* Losing Fist Animations */
@@ -234,108 +223,24 @@
 
 /* Displays the text that player one wins, makes div fly into screen from the left, slow down in the middle, and fly out to the right */
 @keyframes winOne {
-	0% {left: -600px}
-	10% {left: -600px}
-	20% {left: -600px}
-	30% {left: 400px}
-	31% {left: 410px}
-	32% {left: 420px}
-	33% {left: 430px}
-	34% {left: 440px}
-	35% {left: 450px}
-	36% {left: 460px}
-	37% {left: 470px}
-	38% {left: 480px}
-	39% {left: 490px}
-	40% {left: 500px}
-	50% {left: 500px}
-	51% {left: 510px}
-	52% {left: 520px}
-	53% {left: 530px}
-	54% {left: 540px}
-	55% {left: 550px}
-	56% {left: 560px}
-	57% {left: 570px}
-	58% {left: 580px}
-	59% {left: 590px}
-	60% {left: 1500px}
-	70% {left: 1500px}
-	80% {left: 1500px}
-	90% {left: 1500px}
-	100%{left: 1500px}
+	0% {left: -1000%}
+	50% { left: 30% }
+	75% { left: 30% }
+	100% { left: 1000% }
 }
 
 /* Displays the text that player two wins, makes div fly into screen from the right, slow down in the middle, and fly out to the left */
 @keyframes winTwo {
-	0% {right: -600px}
-	10% {right: -600px}
-	20% {right: -600px}
-	30% {right: 400px}
-	31% {right: 410px}
-	32% {right: 420px}
-	33% {right: 430px}
-	34% {right: 440px}
-	35% {right: 450px}
-	36% {right: 460px}
-	37% {right: 470px}
-	38% {right: 480px}
-	39% {right: 490px}
-	40% {right: 500px}
-	50% {right: 500px}
-	51% {right: 510px}
-	52% {right: 520px}
-	53% {right: 530px}
-	54% {right: 540px}
-	55% {right: 550px}
-	56% {right: 560px}
-	57% {right: 570px}
-	58% {right: 580px}
-	59% {right: 590px}
-	60% {right: 1500px}
-	70% {right: 1500px}
-	80% {right: 1500px}
-	90% {right: 1500px}
-	100%{right: 1500px}
+	0% {right: -1000%}
+	50% { right: 30% }
+	75% { right: 30% }
+	100% { right: 1000% }
 }
 
 /* Displays the text that there was a tie, makes div fly into screen from the top, slow down in the middle, and fly out to the bottom */
 @keyframes tie {
-	0% {top: -600px}
-	10% {top: -600px}
-	20% {top: -600px}
-	30% {top: 200px}
-	31% {top: 210px}
-	32% {top: 220px}
-	33% {top: 230px}
-	34% {top: 240px}
-	35% {top: 250px}
-	36% {top: 260px}
-	37% {top: 270px}
-	38% {top: 280px}
-	39% {top: 290px}
-	40% {top: 300px}
-	50% {top: 300px}
-	51% {top: 310px}
-	52% {top: 320px}
-	53% {top: 330px}
-	54% {top: 340px}
-	55% {top: 350px}
-	56% {top: 360px}
-	57% {top: 370px}
-	58% {top: 380px}
-	59% {top: 390px}
-	60% {top: 400px}
-	61% {top: 410px}
-	62% {top: 420px}
-	63% {top: 430px}
-	64% {top: 440px}
-	65% {top: 450px}
-	66% {top: 460px}
-	67% {top: 470px}
-	68% {top: 480px}
-	69% {top: 490px}
-	70% {top: 900px}
-	80% {top: 1000px}
-	90% {top: 1100px}
-	100%{top: 1200px}
+	0% { top: -100% }
+	50% { top: 25% }
+	75% { top: 25% }
+	100% { top: 1000% }
 }
